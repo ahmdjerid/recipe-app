@@ -10,13 +10,13 @@ export class RecipeListComponent implements OnInit {
 
 
 
-  recipes :Recipe[] = [new Recipe("cheescake","Le cheesecake est un gâteau au fromage "
-  ,"https://d3rrv21q7fx9b0.cloudfront.net/m/633ba7d8157e391c/TH04_470x470-TH04_cheesecake-aux-pommes-et-carre-frais.jpg"),
-  new Recipe("cheescake","Le cheesecake est un gâteau au fromage "
-  ,"https://d3rrv21q7fx9b0.cloudfront.net/m/633ba7d8157e391c/TH04_470x470-TH04_cheesecake-aux-pommes-et-carre-frais.jpg")
-];
+  recipes: Recipe[] = [new Recipe('cheescake', 'Le cheesecake est un gâteau au fromage '
+    , 'https://d3rrv21q7fx9b0.cloudfront.net/m/633ba7d8157e391c/TH04_470x470-TH04_cheesecake-aux-pommes-et-carre-frais.jpg'),
+  new Recipe('cheescake', 'Le cheesecake est un gâteau au fromage '
+    , 'https://d3rrv21q7fx9b0.cloudfront.net/m/633ba7d8157e391c/TH04_470x470-TH04_cheesecake-aux-pommes-et-carre-frais.jpg')
+  ];
 
-  constructor() { 
+  constructor() {
 
   }
   ngOnInit() {
