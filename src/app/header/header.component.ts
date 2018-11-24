@@ -15,15 +15,11 @@ export class HeaderComponent implements OnInit {
     this.isShoppingShowed = true;
     this.isReciveShowed = false;
 
-    console.log('isShoppingShowed', this.isShoppingShowed);
-    console.log('isReciveShowed', this.isReciveShowed);
   }
   showRecipe() {
     this.isReciveShowed = true;
     this.isShoppingShowed = false;
 
-    console.log('isShoppingShowed', this.isShoppingShowed);
-    console.log('isReciveShowed', this.isReciveShowed);
 
   }
   ngOnInit() {
