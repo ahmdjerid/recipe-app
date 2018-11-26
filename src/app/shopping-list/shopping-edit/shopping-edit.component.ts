@@ -13,9 +13,9 @@ export class ShoppingEditComponent implements OnInit {
 
   @Output() addIngredientEvent = new EventEmitter<Ingredient>();
 
-  @ViewChild("inputName") ingredientName;
+  @ViewChild('inputName') ingredientName;
 
-  @ViewChild("inputAmount") ingredientAmount;
+  @ViewChild('inputAmount') ingredientAmount;
 
 
   newIngredient: Ingredient;
