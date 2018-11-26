@@ -9,14 +9,14 @@ import { Recipe } from './recipe.model';
 export class RecipesComponent implements OnInit {
 
 
-  selectedRecipe: Recipe = new Recipe('', '', '');
+  selectedRecipe: Recipe = new Recipe('', '', '', '');
   constructor() { }
 
   ngOnInit() {
 
   }
   catchRecipe(recipe: Recipe) {
-    this.selectedRecipe = new Recipe(recipe.name, recipe.description, recipe.urlImage);
+    this.selectedRecipe = new Recipe(recipe.name, recipe.description, recipe.urlImage, recipe.ingredients);
   }
 
 }
