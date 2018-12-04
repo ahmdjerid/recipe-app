@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter, Output, } from '@angular/core';
+import { element } from 'protractor';
+import { Component, OnInit, EventEmitter, Output, ElementRef } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { RecipeService } from 'src/app/services/recipe.service';
 
@@ -20,7 +21,7 @@ export class RecipeListComponent implements OnInit {
 
   }
 
-  holdRecipe(recipe) {
-    this.recipHoldedEvent.emit(recipe);
+  holdRecipe(item) {
+    console.log('asba');
   }
 }
