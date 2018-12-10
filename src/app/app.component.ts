@@ -1,6 +1,4 @@
 import { Component, ViewChild, DoCheck, } from '@angular/core';
-import { timer } from 'rxjs';
-import { getCurrentDebugContext } from '@angular/core/src/view/services';
 import { HeaderComponent } from './header/header.component';
 
 @Component({
@@ -16,7 +14,7 @@ export class AppComponent implements DoCheck {
   isReciveShowed: boolean;
 
 
-  ngDoCheck() { 
+  ngDoCheck() {
     this.isShoppingShowed = this.headerCmp.isShoppingShowed;
     this.isReciveShowed = this.headerCmp.isReciveShowed;
   }
