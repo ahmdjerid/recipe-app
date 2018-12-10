@@ -10,10 +10,11 @@ export class RecipeService {
 
 
 
-  @Output() recipeDetailEvent = new EventEmitter<Recipe>();
   constructor(private shoppingService: ShoppingService) {
 
   }
+
+
 
   private ingredients = [new Ingredient('eggs', 2), new Ingredient('cheese', 3)];
 
@@ -27,12 +28,15 @@ export class RecipeService {
     this.ingredients)
   ];
 
-  selectRecipe(recipe: Recipe): void {
-    this.recipeDetailEvent.emit(recipe);
-  }
+ 
 
   addToShppingList(ingredients: [Ingredient]): void {
     ingredients.forEach(ingredient => this.shoppingService.addIngredient(ingredient));
+  }
+
+  getRecipeById(id: number): Recipe {
+    return this.recipes[id];
+
   }
 
 }

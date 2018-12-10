@@ -1,3 +1,4 @@
+import { EditrecipeComponent } from './recipes/editrecipe/editrecipe.component';
 import { AppRoutingModule } from './app-Routing-Module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,6 +20,7 @@ import { StartRecipeComponent } from './recipes/start-recipe/start-recipe.compon
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +33,8 @@ import { StartRecipeComponent } from './recipes/start-recipe/start-recipe.compon
     ShoppingListComponent,
     DropdownDirective,
     DropdownDirective,
-    StartRecipeComponent
+    StartRecipeComponent,
+    EditrecipeComponent
   ],
   imports: [
     BrowserModule,

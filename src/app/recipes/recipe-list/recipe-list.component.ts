@@ -1,7 +1,8 @@
 import { element } from 'protractor';
-import { Component, OnInit, EventEmitter, Output, ElementRef } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ElementRef, Injectable, Input } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { RecipeService } from 'src/app/services/recipe.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-list',
@@ -14,14 +15,11 @@ export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[];
 
-  constructor(recipeService: RecipeService) {
+  constructor(private recipeService: RecipeService,
+    private route: Router) {
     this.recipes = recipeService.recipes;
   }
   ngOnInit() {
-
   }
 
-  holdRecipe(item) {
-    console.log('asba');
-  }
 }

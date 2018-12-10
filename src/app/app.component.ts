@@ -16,7 +16,7 @@ export class AppComponent implements DoCheck {
   isReciveShowed: boolean;
 
 
-  ngDoCheck() {
+  ngDoCheck() { 
     this.isShoppingShowed = this.headerCmp.isShoppingShowed;
     this.isReciveShowed = this.headerCmp.isReciveShowed;
   }

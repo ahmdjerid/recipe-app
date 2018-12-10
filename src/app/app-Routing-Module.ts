@@ -5,6 +5,7 @@ import { NgModule, Component } from '@angular/core';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { Routes, RouterModule } from '@angular/router';
+import { EditrecipeComponent } from './recipes/editrecipe/editrecipe.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,9 @@ const routes: Routes = [
     {
         path: 'recipes', component: RecipesComponent, children: [
             { path: '', component: StartRecipeComponent },
-            { path: ':id', component: RecipeDetailComponent }
+            { path: 'new', component: EditrecipeComponent },
+            { path: ':id', component: EditrecipeComponent },
+            { path: ':id/edit', component: RecipeDetailComponent }
         ]
     },
     { path: 'shoppings', component: ShoppingListComponent },
@@ -23,3 +26,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 }
+
