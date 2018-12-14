@@ -1,3 +1,23 @@
-<p>
-  editrecipe works!
-</p>
+<form>
+  <div class="row">
+    <div class="col-sm-2 form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" [(ngModel)]="editedRecipe.name" name ="name" class="form-control">
+    </div>
+    <div class="col-sm-5 form-group">
+      <label for="amount">description</label>
+      <input type="text" name="desc" id="description"  [(ngModel)]="editedRecipe.description"  class="form-control">
+    </div>
+    <div class="col-sm-5 form-group">
+      <label for="amount">url Image</label>
+      <input type="text" name="imageurl" id="imageurl" [(ngModel)]="editedRecipe.urlImage"  class="form-control">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success" (click)="saveIngredient()" type="submit">save</button>    
+      <button class="btn btninputAmount-primary" type="button">Clear</button>
+    </div>
+  </div>
+</form>

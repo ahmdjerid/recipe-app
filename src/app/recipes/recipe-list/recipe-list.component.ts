@@ -2,7 +2,8 @@ import { element } from 'protractor';
 import { Component, OnInit, EventEmitter, Output, ElementRef, Injectable, Input } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { RecipeService } from 'src/app/services/recipe.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { relative } from 'path';
 
 @Component({
   selector: 'app-recipe-list',
@@ -15,11 +16,16 @@ export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[];
 
-  constructor(private recipeService: RecipeService,
-    private route: Router) {
+  constructor(private router: Router, private recipeService: RecipeService,
+    private route: Router,
+    private activatedRoute: ActivatedRoute) {
     this.recipes = recipeService.recipes;
   }
   ngOnInit() {
   }
 
+  createRecipe() {
+    console.log('add new recipe');
+    this.route.navigate(['new'], { relativeTo: this.activatedRoute });
+  }
 }
